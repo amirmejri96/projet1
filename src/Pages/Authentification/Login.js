@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './authStyle.css'
+import './loginStyle.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
@@ -26,27 +26,27 @@ const Login = () => {
     
     return (
     <div>
-        <section class="bodyAuth">
-    <div class="sectionAuth">
-      <div class="container">
-        <div class="user signinBx">
-          <div class="imgBx">
-            <img src='../../../assets/logo.jpg' alt="Logo Loconada" />
+        <section className="bodyAuth">
+    <div className="sectionAuth">
+      <div className="container">
+        <div className="user signinBx">
+          <div className="imgBx">
+            <img src='../../../assets/8.jpg' alt="Logo Loconada" />
           </div>
-          <div class="formBx">
+          <div className="formBx">
             <form>
-              <h2>Se Connecter</h2>
+              <h2>Bienvenue cher Loconadien </h2>
               <input type="email" name="email" placeholder="email"  value={email} onChange={(e)=>setEmail(e.target.value)}  />
               <input type="password" name="password" placeholder="Password"   value={password} onChange={(e)=>setPassword(e.target.value)}  />
   
-              <button className='btn' type="button" name="" value="Login"  onClick={()=>LoginUser({email, password})}   > Se connecter </button>
+              <button classNameName='btn' type="button" name="" value="Login"  onClick={()=>LoginUser({email, password})}   > Se connecter </button>
               
               
               
               
               
-              <p class="signup">
-                <a href="/">Créer un compte ?</a>
+              <p className="signup">
+                <a href="/">Devenir un Loconadien? Devenez un !</a>
               </p>
             </form>
           </div>
