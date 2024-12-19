@@ -31,7 +31,7 @@ const Login = () => {
       <div className="container">
         <div className="user signinBx">
           <div className="imgBx">
-            <img src='../../../assets/8.jpg' alt="Logo Loconada" />
+            <img src='../../../assets/3-Soulwhen.jpg' alt="Logo Loconada" />
           </div>
           <div className="formBx">
             <form>
@@ -46,7 +46,7 @@ const Login = () => {
               
               
               <p className="signup">
-                <a href="/">Devenir un Loconadien? Devenez un !</a>
+                <a href="/register">Devenir un Loconadien? Devenez un !</a>
               </p>
             </form>
           </div>

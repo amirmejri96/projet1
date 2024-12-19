@@ -12,7 +12,7 @@ const Accueil = () => {
             </div>
             <div className="cta">
                 <a href='/login'>Se connecter</a>
-                <a href='/'>S'inscrire</a>
+                <a href='/register'>S'inscrire</a>
             </div>
     </div>
   )
