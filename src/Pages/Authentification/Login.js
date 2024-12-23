@@ -12,7 +12,6 @@ const Login = () => {
         try{
           const res = await axios.post('http://localhost:5000/user/login', values)
           await localStorage.setItem('token', res.data.token)
-          await alert('Welcome, you will go to the right page')
           console.log('login user',res.data)
 
           console.log('token user',res.data.token)
@@ -20,7 +19,7 @@ const Login = () => {
 
 
         } catch(err) {
-          console.log('Failed to login',err)
+          alert('Connexion échouée')
         }
     }
     
@@ -36,8 +35,8 @@ const Login = () => {
           <div className="formBx">
             <form>
               <h2>Bienvenue cher Loconadien </h2>
-              <input type="email" name="email" placeholder="email"  value={email} onChange={(e)=>setEmail(e.target.value)}  />
-              <input type="password" name="password" placeholder="Password"   value={password} onChange={(e)=>setPassword(e.target.value)}  />
+              <input type="email" name="email" placeholder="email"  value={email} onChange={(e)=>setEmail(e.target.value)} required />
+              <input type="password" name="password" placeholder="Password"   value={password} onChange={(e)=>setPassword(e.target.value)} required />
   
               <button classNameName='btn' type="button" name="" value="Login"  onClick={()=>LoginUser({email, password})}   > Se connecter </button>
               

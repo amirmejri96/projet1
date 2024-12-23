@@ -11,13 +11,7 @@ const Navbar = () => {
         <ul className="nav-links">
             <li><a href="/">Accueil</a></li>
             <li><a href="/about">À propos</a></li>
-            <li className="dropdown">
-                <a href="#editions" className="dropdown-toggle">Éditions</a>
-                <ul className="dropdown-menu">
-                    <li><a href="/edition">Éditions passées</a></li>
-                    <li><a href="#editions-a-venir">Édition à venir</a></li>
-                </ul>
-            </li>
+            <li><a href="/edition">Éditions</a></li>
         </ul>
     </nav>
     

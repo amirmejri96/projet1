@@ -22,6 +22,10 @@
   
   
   @media (max-width: 768px) {
+    .footer{
+      margin-top: 100px;
+    }
+    
     .footer-icons {
       flex-direction:row ; 
       gap: 15px;

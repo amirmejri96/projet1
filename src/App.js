@@ -8,6 +8,7 @@ import Accueil from './Pages/Accueil/Accueil';
 import Footer from './Components/Footer';
 import About from './Pages/About/About';
 import Edition from './Pages/Editions/Edition';
+import Reservation from './Pages/Reservation/Reservation';
 
 
 
@@ -22,6 +23,7 @@ function App() {
         <Route path='/privateRoute' element={<PrivateRoute/>} />
         <Route path='/about' element={<About/>} />
         <Route path='/edition' element={<Edition/>} />
+        <Route path='/reservation' element={<Reservation/>} />
 
       </Routes>
       <Footer/>

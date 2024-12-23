@@ -14,10 +14,14 @@ const Register = () => {
     const [password, setPassword] = useState("")
 
     const AddingUser = async (values) => {
+      try{
         await RegisterAuth(values)
-        await alert('User Added')
+        await alert('Utilisateur ajouté')
         Navigate('/login')
+    } catch(err) {
+      alert('Inscription échouée, veuillez réessayer')
     }
+  }
 
   return (
     <div><section className="bodyAuth">
@@ -31,11 +35,11 @@ const Register = () => {
             <form>
               <h2>Devenir un Loconadien</h2>
   
-              <input type="text" name="fistName"  value={firstName}  onChange={(e)=>setFirstName(e.target.value)} placeholder='Prénom' />
-              <input type="text" name="lasName"  value={lastName}  onChange={(e)=>setLastName(e.target.value)} placeholder='Nom' />
-              <input type="text" name="age"  value={age}  onChange={(e)=>setAge(e.target.value)} placeholder='Age' />
-              <input type="text" name="email"  value={email}  onChange={(e)=>setEmail(e.target.value)}  placeholder='Email'  />
-              <input type="password" name="password"   value={password}  onChange={(e)=>setPassword(e.target.value)} placeholder='Mot de passe' />
+              <input type="text" name="fistName"  value={firstName}  onChange={(e)=>setFirstName(e.target.value)} placeholder='Prénom' required/>
+              <input type="text" name="lasName"  value={lastName}  onChange={(e)=>setLastName(e.target.value)} placeholder='Nom' required/>
+              <input type="text" name="age"  value={age}  onChange={(e)=>setAge(e.target.value)} placeholder='Age' required/>
+              <input type="text" name="email"  value={email}  onChange={(e)=>setEmail(e.target.value)}  placeholder='Email'  required/>
+              <input type="password" name="password"   value={password}  onChange={(e)=>setPassword(e.target.value)} placeholder='Mot de passe' required/>
   
               <button classNameName='btn' type="button" name="" value="register"   onClick={()=>AddingUser({firstName, lastName, age, email, password})}  >S'inscrire</button>
               <p className="signup">
